@@ -5,12 +5,14 @@ $(document).ready(function() {
 });
 
 $("#primaryNavProjects").click(function() {
-    if ($("#secondaryNav").is(":hidden")) {
-        $(this).find("#secondaryNavToggle").css({"text-decoration": "underline", "color": "#32584C"});
-    } else {
-        $(this).find("#secondaryNavToggle").css({"text-decoration": "", "color": ""}); // reset to default
-    }
-    $("#secondaryNav").slideToggle();
+    $("#secondaryNav").slideToggle(function() {
+        // callback to wait till animation is done before testing for :hidden, otherwise will be faulty
+        if ($("#secondaryNav").is(":hidden")) {
+            $("#secondaryNavToggle").css({"color": ""}); // reset to default
+        } else {
+            $("#secondaryNavToggle").css({"color": "#32584C"});
+        }
+    });
 });
 
 $("#logo").hover(function() {
