@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $("#secondaryNav").hide();
+    $("body").fadeIn(500);
 });
 
 $("#primaryNavProjects").click(function() {

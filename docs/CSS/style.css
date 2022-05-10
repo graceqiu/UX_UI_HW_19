@@ -12,6 +12,7 @@
 body {
     margin: 2% 3%;
     background-color: var(--background);
+    display: none;
 }
 
 #container {
