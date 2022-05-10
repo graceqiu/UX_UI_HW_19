@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $("#secondaryNav").hide();
+    $("#logoActive").hide();
     $("body").fadeIn(500);
 });
 
@@ -12,10 +13,8 @@ $("#primaryNavProjects").click(function() {
     $("#secondaryNav").slideToggle();
 });
 
-$("#logoInactive").mouseenter(function() {
-    $(this).toggle();
-    $(this).next().toggle();
-}).mouseleave(function() {
-    $(this).toggle();
-    $(this).next().toggle();
+$("#logo").hover(function() {
+    $(this).text("graceqiu").removeClass("altTextPrimary").addClass("altTextSecondary").fadeIn();
+}, function() {
+    $(this).text("gq").removeClass("altTextSecondary").addClass("altTextPrimary").fadeIn();
 });
