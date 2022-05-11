@@ -16,7 +16,9 @@ $("#primaryNavProjects").click(function() {
 });
 
 $("#logo").hover(function() {
-    $(this).text("graceqiu").removeClass("altTextPrimary").addClass("altTextSecondary").fadeIn();
-}, function() {
-    $(this).text("gq").removeClass("altTextSecondary").addClass("altTextPrimary").fadeIn();
-});
+        $("#logoInactive").fadeOut(500);
+        $("#logoActive").fadeIn(300);
+    }, function() {
+        $("#logoActive").fadeOut(500);
+        $("#logoInactive").fadeIn(300);
+    });

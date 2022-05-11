@@ -136,10 +136,6 @@ ul {
 
 /* Primary Nav */
 
-header #logoActive {
-    display: none;
-}
-
 header {
     display: flex;
     flex-direction: row;
@@ -154,6 +150,15 @@ header {
     width: 94%;
     padding-top: 2%;
     padding-bottom: 2%;
+}
+
+header #logo {
+    position: relative;
+}
+
+header #logo h1 {
+    position: absolute;
+    transform: translate(0, -50%);
 }
 
 header a {
