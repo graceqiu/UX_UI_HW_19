@@ -118,11 +118,13 @@ ul {
     text-decoration: underline;
     color: var(--accentSecondary);
     display: none;
+    transition: 0.3s;
 }
 
 .arrowLink .material-icons.md-48 { 
     font-size: 48px; 
     color: var(--accentPrimary);
+    transition: 0.3s;
 }
 
 .arrowLink .material-icons.md-48:hover {
