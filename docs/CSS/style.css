@@ -232,6 +232,10 @@ header #primaryNav #primaryNavProjects #secondaryNav li a {
     text-align: center;
 }
 
+#homeHero #homeHeroAltText {
+    opacity: 0;
+}
+
 /* Home: Projects */
 
 #projects {

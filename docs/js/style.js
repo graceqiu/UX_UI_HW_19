@@ -1,7 +1,13 @@
 $(document).ready(function() {
     $("#secondaryNav").hide();
     $("#logoActive").hide();
-    $("body").fadeIn(500);
+    
+    // make page load smooth
+    $("body").fadeIn(500, function() {
+        if ($("#homeHeroAltText").length) { // check if we need to fade in part of the home page
+            $("#homeHeroAltText").fadeTo(2000, 1);
+        }
+    });
 });
 
 $("#primaryNavProjects").click(function() {
@@ -21,4 +27,4 @@ $("#logo").hover(function() {
     }, function() {
         $("#logoActive").fadeOut(500);
         $("#logoInactive").fadeIn(300);
-    });
+});
